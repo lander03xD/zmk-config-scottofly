@@ -1,2 +1,2 @@
 config SHIELD_FISHKEEB
-    def_bool $(shields_list_contains, fishKeeb)
+    def_bool $(shields_list_contains,fishKeeb)
