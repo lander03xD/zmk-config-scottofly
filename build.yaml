@@ -14,8 +14,6 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: scottoFly
-  - board: nice_nano_v2
     shield: settings_reset
   - board: nice_nano_v2
     shield: fishKeeb
