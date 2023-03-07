@@ -17,7 +17,7 @@
 
         symbol_layer {
             bindings = <
-                &kp GRAVE   &kp PERCENT   &kp PIPE   &kp AMPERSAND   &kp UNDERSCORE   &kp PLUS   &kp KP_SLASH   &kp  BACKSLASH      &kp KP_PLUS       &kp KP_EQUAL
+                &kp GRAVE   &kp PERCENT   &kp PIPE   &kp AMPERSAND   &kp UNDERSCORE   &kp PLUS   &kp KP_SLASH   &kp BACKSLASH      &kp KP_PLUS       &kp KP_EQUAL
                 &kp TILDE   &kp EXCLAMATION   &kp LEFT_BRACE   &kp KP_LEFT_PARENTHESIS   &kp MINUS  &kp EQUAL   &kp KP_RIGHT_PARENTHESIS   &kp ASTERISK       &kp KP_MINUS       &kp DOUBLE_QUOTES
                 &kp N1   &kp N2   &kp N3   &kp N4   &kp N5   &kp N6   &kp N7   &kp N8   &kp N9     &kp N0
                                    &none &mo 1  &mt LEFT_CONTROL TAB &kp LEFT_SHIFT  &kp BACKSPACE    &kp RET
@@ -29,7 +29,7 @@
                 &kp ESCAPE   &kp HOME  &kp UP   &kp END   &kp PG_UP   &kp C_VOL_UP  &none   &bt BT_CLR   &bootloader   &to 3
                 &kp K_MUTE    &kp LEFT   &kp DOWN   &kp RIGHT   &kp PG_DOWN   &kp C_VOL_DOWN   &bt BT_SEL 0   &bt BT_SEL 1    BT_SEL 2  &to 0
                 &kp F1  &kp F2   &kp F3 &kp F4  &kp F5 &kp F6  &kp F7   &kp F8 &kp F9  &kp F0 
-                                            &none   &none   &none   &kp LEFT_SHIFT   &kp DELETE   &kp  RET
+                                            &none   &none   &none   &kp LEFT_SHIFT   &kp DELETE   &kp RET
             >;
         };
 
