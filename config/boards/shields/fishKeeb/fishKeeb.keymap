@@ -7,7 +7,14 @@
 #define SYMB   2
 #define NAVI   3
 
-/ {  
+/ {
+	behaviors {
+		mt: behavior_mod_tap {
+			tapping-term-ms = <400>;
+		};
+	};
+};
+{  
     keymap {
         compatible = "zmk,keymap";
 
