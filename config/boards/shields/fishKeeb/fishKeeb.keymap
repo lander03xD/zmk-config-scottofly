@@ -3,10 +3,10 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define BASE 0
-#define LAYER 1
-#define MAC   2
-#define SYMB   3
-#define NAVI   4
+#define MAC   1
+#define SYMB   2
+#define NAVI   3
+#define LAYER 4
 #define CSGO    5
 
 &mt {
@@ -23,15 +23,6 @@
                 &kp A           &kp S   &kp D   &kp F   &kp G                   &kp H           &kp J       &kp K               &kp L       &kp SEMICOLON
                 &mt LEFT_GUI Z  &kp X   &kp C   &kp V   &kp B                   &kp N           &kp M       &kp COMMA           &kp DOT     &mt LEFT_ALT SLASH
                                         &mo NAVI   &mo SYMB   &mt LEFT_CONTROL TAB    &kp LEFT_SHIFT  &kp SPACE   &mt LEFT_CONTROL RET
-            >;
-        }; 
-
-        layer_layer {
-            bindings = <
-                &bootloader &none   &none   &none   &none   &bt BT_SEL 0    &bt BT_CLR  &none   &none   &to CSGO   
-                &none       &none   &none   &none   &none   &bt BT_SEL 1    &none       &none   &none   &none   
-                &none       &none   &none   &none   &none   &bt BT_SEL 2    &none       &none   &none   &none   
-                                    &tog LAYER   &tog LAYER &tog LAYER   &tog LAYER    &tog LAYER   &tog LAYER
             >;
         }; 
 
@@ -58,9 +49,18 @@
                 &kp ESCAPE  &kp HOME    &kp UP      &kp END     &kp PG_UP   &kp C_VOL_UP    &kp HOME    &kp UP      &kp END     &to MAC
                 &kp K_MUTE  &kp LEFT    &kp DOWN    &kp RIGHT   &kp PG_DN   &kp C_VOL_DN    &kp LEFT    &kp DOWN    &kp RIGHT   &to BASE
                 &kp F1      &kp F2      &kp F3      &kp F4      &kp F5      &kp F6          &kp F7      &kp F8      &kp F9      &kp F10 
-                                        &none       &none       &tog LAYER   &kp LEFT_SHIFT  &kp DELETE  &kp RET
+                                        &none       &none       &to LAYER   &kp LEFT_SHIFT  &kp DELETE  &kp RET
             >;
         };
+
+        layer_layer {
+            bindings = <
+                &bootloader &none   &none   &none   &none   &bt BT_SEL 0    &bt BT_CLR  &none   &none   &to MAC   
+                &none       &none   &none   &none   &none   &bt BT_SEL 1    &none       &none   &none   &to BASE   
+                &none       &none   &none   &none   &none   &bt BT_SEL 2    &none       &none   &none   &to CSGO   
+                                    &none   &none   &none   &none           &none       &none      
+            >;
+        }; 
 
         csgo_layer {
             bindings = <
