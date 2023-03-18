@@ -13,7 +13,18 @@
     tapping-term-ms = <300>;
 };
 
-/ {  
+/ {
+    macros {
+        mc_base: mc_base {
+            label = "MC_base";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&bt BASE &to BASE>;
+        };
+    };
+    
+  {  
     behaviors {
         ht_tp: holdtap_tappref {
             compatible = "zmk,behavior-hold-tap";
@@ -66,9 +77,9 @@
 
         layer_layer {
             bindings = <
-                &bootloader &none   &none   &none   <&bt BT_SEL 0, &to BASE>   &none   &none       &none   &none   &to BASE   
-                &none       &none   &none   &none   <&bt BT_SEL 1, &to MAC>    &none   &none       &none   &none   &to MAC   
-                &bt BT_CLR  &none   &none   &none   &bt BT_SEL 2               &none   &none       &none   &none   &to CSGO   
+                &bootloader &none   &none   &none   &mc_base        &none   &none       &none   &none   &to BASE   
+                &none       &none   &none   &none   &bt BT_SEL 1    &none   &none       &none   &none   &to MAC   
+                &bt BT_CLR  &none   &none   &none   &bt BT_SEL 2    &none   &none       &none   &none   &to CSGO   
                                     &none   &none   &none                      &none   &none       &none      
             >;
         }; 
