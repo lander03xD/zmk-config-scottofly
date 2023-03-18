@@ -22,6 +22,20 @@
             bindings
                 = <&bt BT_SEL BASE &to BASE>;
         };
+        mc_mac: mc_mac {
+            label = "ZM_mc_mac";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&bt BT_SEL MAC &to MAC>;
+        };
+        mc_third: mc_third {
+            label = "ZM_mc_third";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&bt BT_SEL 2 &to BASE>;
+        };
     };
     behaviors {
         ht_tp: holdtap_tappref {
@@ -76,8 +90,8 @@
         layer_layer {
             bindings = <
                 &bootloader &none   &none   &none   &mc_base        &none   &none       &none   &none   &to BASE   
-                &none       &none   &none   &none   &bt BT_SEL 1    &none   &none       &none   &none   &to MAC   
-                &bt BT_CLR  &none   &none   &none   &bt BT_SEL 2    &none   &none       &none   &none   &to CSGO   
+                &none       &none   &none   &none   &mc_mac         &none   &none       &none   &none   &to MAC   
+                &bt BT_CLR  &none   &none   &none   &mc_third       &none   &none       &none   &none   &to CSGO   
                                     &none   &none   &none                      &none   &none       &none      
             >;
         }; 
