@@ -13,7 +13,7 @@
     tapping-term-ms = <300>;
 };
 
-/ {
+/ {  
     macros {
         mc_base: mc_base {
             label = "ZM_mc_base";
@@ -23,9 +23,6 @@
                 = <&kp A>;
         };
     };
-};
-    
-  {  
     behaviors {
         ht_tp: holdtap_tappref {
             compatible = "zmk,behavior-hold-tap";
