@@ -20,7 +20,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&bt BT_SEL BASE &to BASE>;
+                = <&to BASE>;
         };
     };
     
@@ -77,7 +77,7 @@
 
         layer_layer {
             bindings = <
-                &bootloader &none   &none   &none   &mc_base        &none   &none       &none   &none   &to BASE   
+                &bootloader &none   &none   &none   &bt BT_SEL 0        &none   &none       &none   &none   &to BASE   
                 &none       &none   &none   &none   &bt BT_SEL 1    &none   &none       &none   &none   &to MAC   
                 &bt BT_CLR  &none   &none   &none   &bt BT_SEL 2    &none   &none       &none   &none   &to CSGO   
                                     &none   &none   &none                      &none   &none       &none      
