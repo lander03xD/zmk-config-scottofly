@@ -20,7 +20,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&bt BASE &to BASE>;
+                = <&bt BT_SEL BASE &to BASE>;
         };
     };
     
