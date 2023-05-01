@@ -3,7 +3,4 @@ if SHIELD_FISHKEEB
 config ZMK_KEYBOARD_NAME 
     default "fishKeeb"
 
-config CONFIG_ZMK_MOUSE
-    default y
-
 endif
