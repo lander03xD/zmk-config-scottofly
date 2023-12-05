@@ -1,0 +1,2 @@
+config SHIELD_YELLOWFIN
+    def_bool $(shields_list_contains,yellowFin)
