@@ -15,7 +15,7 @@
         compatible = "zmk,combos";
         
         combo_activate_layer_3 {
-            timeout-ms = <50>;
+            timeout-ms = <150>;
             key-positions = <30 32>;
             bindings = <&mo CONF>;
         };
@@ -25,12 +25,11 @@
         mt: mod_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "balanced";
-            require-prior-idle-ms = <125>;
-            tapping-term-ms = <220>;
-            quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
-            hold-trigger-on-release;
+            flavor = "balanced";
+            quick-tap-ms = <150>;
+            tapping-term-ms = <220>;
+            require-prior-idle-ms = <150>;
         };
     };
 
@@ -44,14 +43,14 @@
                 &kp Q    &kp W    &kp E    &kp R    &kp T                   
                 &kp Y    &kp U    &kp I    &kp O    &kp P
                 
-                &mt LGUI A    &mt LALT S    &mt LCTRL D    &mt LSHFT F    &kp G                   
-                &kp H    &mt LSHFT J    &mt LCTRL K    &mt LALT L    &mt LGUI SEMICOLON
+                &kp A    &kp S    &kp D    &kp F    &kp G                   
+                &kp H    &kp J    &kp K    &kp L    &kp SEMICOLON
                 
-                &kp Z    &kp X    &kp C        &kp V      &kp B                   
-                &kp N    &kp M    &kp COMMA    &kp DOT    &kp SLASH
+                &mt LGUI Z    &kp X    &kp C        &kp V      &kp B                   
+                &kp N    &kp M    &kp COMMA    &kp DOT    &mt LALT  SLASH
                 
-                &mo NAVI     &mo SYMB      &kp TAB    
-                &kp LSHFT    &kp SPACE     &kp RET
+                &mo NAVI     &mo SYMB      &mt LCTRL TAB    
+                &kp LSHFT    &kp SPACE     &mt LCTRL RET
 
             >;
         };
